@@ -15,10 +15,6 @@ class NetAccessApi {
   static final HttpClient _httpClient = HttpClient();
   static final String _url = "api.github.com";
 
-  //static Future<List<GithubRepo>> getTrendingRepositories() async {
-  //  return GithubRepo.mockList();
-  //}
-
   static Future<List<GithubRepo>> getTrendingRepositories() async {
     final lastWeek = DateTime.now().subtract(Duration(days: 7));
     final formattedDate = formatDate(lastWeek, [yyyy, '-', mm, '-', dd]);
